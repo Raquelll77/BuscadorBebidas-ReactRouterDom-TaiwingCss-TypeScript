@@ -1,3 +1,4 @@
+import {NavLink} from 'react-router-dom'
 export default function Header() {
   return (
     <header className="bg-slate-800">
@@ -6,7 +7,14 @@ export default function Header() {
                 <div className="">
                     <img className="w-32" src="/logo.svg" alt="logotipo" />
                 </div>
-                <nav></nav>
+                <nav className='flex gap-4'>
+                    <NavLink to="/" className={({isActive})=>
+                        isActive ? 'text-orange-500 uppercase font-bold' : 'text-white uppercase font-bold'
+                    }>Inicio</NavLink>
+                    <NavLink to="/favoritos" className={({isActive})=>
+                        isActive ? 'text-orange-500 uppercase font-bold' : 'text-white uppercase font-bold'
+                    }>Favoritos</NavLink>
+                </nav>
             </div>
         </div>
     </header>
