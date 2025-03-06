@@ -40,4 +40,7 @@ export const RecipeAPIResponseSchema = z.object({
     strMeasure4: z.string().nullable(),
     strMeasure5: z.string().nullable(),
     strMeasure6: z.string().nullable(),
+    strMeasure7: z.string().nullable(),
+    strMeasure8: z.string().nullable(),
+    strMeasure9: z.string().nullable(),
   });
