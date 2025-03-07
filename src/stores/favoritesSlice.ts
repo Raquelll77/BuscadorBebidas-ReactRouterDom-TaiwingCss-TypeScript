@@ -1,6 +1,5 @@
 import {StateCreator} from 'zustand'
 import { Recipe } from '../types'
-import FavoritesPage from '../views/FavoritesPage'
 
 export type FavoriteSliceType = {
     favorites: Recipe[]
