@@ -7,11 +7,14 @@ import { useAppStore } from '../stores/useAppStore'
 export default function Notification() {
 
   const notification = useAppStore((state) =>state.notification)
+  
+  const hideNotification = useAppStore((state) =>state.hideNotification)
+  
 
   return (
     <div
       aria-live="assertive"
-      className="pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6"
+      className="pointer-events-none fixed inset-0 flex items-end px-4 py-6 sm:items-start sm:p-6 z-50"
     >
       <div className="flex w-full flex-col items-center space-y-4 sm:items-end">
         <Transition
@@ -44,7 +47,7 @@ export default function Notification() {
                   <button
                     type="button"
                     className="inline-flex rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
-                    onClick={() => { }}
+                    onClick={hideNotification}
                   >
                     <span className="sr-only">Cerrar</span>
                     <XMarkIcon className="h-5 w-5" aria-hidden="true" />
