@@ -6,7 +6,7 @@ export default {
         const result = streamText({
             model: openrouter('meta-llama/llama-4-maverick:free'),
             prompt,
-            system: 'Eres un bartender que tiene 50 años de experiencia y le sirvio una bebida a James Bond'
+            /* system: 'Eres un bartender que tiene 50 años de experiencia y le sirvio una bebida a James Bond' */
 
         })
     
